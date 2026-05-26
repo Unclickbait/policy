@@ -15,7 +15,7 @@ To provide the core functionality of rewriting clickbait titles, and to understa
 If telemetry is enabled (default), we collect usage data to help us improve the product. This data is fully anonymous and includes:
 - **Device ID & Session ID:** A random UUID (Universally Unique Identifier) is generated to measure retention and session length. It cannot be linked to your identity or personal accounts.
 - **Product Usage Metrics:** The number of titles processed, changed, and toggled, as well as API latency and cache hit rates. Article IDs are hashed (SHA-256) before transmission to ensure your reading habits remain private.
-- **Engagement Signals:** Scroll depth, dwell time on rewritten titles, and extension popup interactions.
+- **Engagement Signals:** Scroll depth, dwell time on rewritten titles, extension popup interactions, and optional thumbs-up/thumbs-down feedback you leave on rewritten titles.
 - **Environment Info:** Browser name/version, OS platform, screen resolution, and extension version.
 
 ### What We Do NOT Collect
@@ -34,7 +34,8 @@ When opted out, the extension will function normally but will not send any backg
 
 ## 3. Data Storage and Retention
 
-- **Local Storage:** The extension stores settings (like your toggle preferences), cache, and your anonymous Device ID locally in your browser.
+- **Local Storage:** The extension stores settings (like your toggle preferences) and cached titles locally in your browser.
+- **Sync Storage:** Your anonymous Device ID is stored in your browser's sync storage, which may synchronize it across your signed-in browser instances. This is used solely for anonymous retention metrics.
 - **Server Storage:** Anonymous telemetry data sent to our servers is stored securely. We retain this telemetry data for up to **90 days** for product analytics, after which it is aggregated or deleted.
 - Processed article titles are not linked to your Device ID on our servers.
 
